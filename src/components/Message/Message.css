@@ -1,0 +1,29 @@
+.message {
+    display: flex;
+}
+
+.message__name-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.message__avatar {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+}
+
+.message__name{
+    margin: 0 0 10px 0;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 14px;
+    color: #7E7C7C;
+
+}
+
+.message__message-text {
+    margin: 0;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 24px;
+}
