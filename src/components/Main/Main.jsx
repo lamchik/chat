@@ -4,10 +4,12 @@ import './Main.css'
 import MessageContainer from "../MessageContainer/MessageContainer";
 
 const Main = (props) => {
-  const {messages} = props
+  const {messages, page} = props
   return (
     <div className='main'>
-      <Header/>
+      <Header
+        page = {page}
+      />
       <MessageContainer
         messages={messages}
       />

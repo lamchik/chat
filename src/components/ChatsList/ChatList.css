@@ -17,6 +17,12 @@
     transition: 0.3s linear;
 }
 
+.chat-list__work_active {
+    border-radius: 25px 0 0 25px;
+    background-color: rgba(197, 201, 222, 0.67);
+    color: #FFFFFF;
+}
+
 .chat-list__work:hover {
     border-radius: 25px 0 0 25px;
     background-color: rgba(197, 201, 222, 0.67);
@@ -35,6 +41,12 @@
     text-decoration: none;
 }
 
+.chat-list__flood_active {
+    border-radius: 25px 0 0 25px;
+    background-color: rgba(197, 201, 222, 0.67);
+    color: #FFFFFF;
+}
+
 .chat-list__flood:hover {
     border-radius: 25px 0 0 25px;
     background-color: rgba(197, 201, 222, 0.67);
@@ -47,7 +59,6 @@
     text-decoration: none;
     color: rgba(226, 197, 140, 0.8);
     font-family: 'Inter', 'Arial', sans-serif;
-
 }
 
 .chat-list__flood-text {

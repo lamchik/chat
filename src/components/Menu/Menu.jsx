@@ -3,11 +3,14 @@ import User from "../User/User";
 import ChatList from "../ChatsList/ChatList";
 import Footer from "../Footer/Footer";
 
-const Menu = () => {
+const Menu = (props) => {
+const {page} = props
   return (
     <div className='menu'>
       <User/>
-      <ChatList/>
+      <ChatList
+        page={page}
+      />
       <Footer/>
     </div>
   )

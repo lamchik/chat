@@ -24,19 +24,28 @@ function App () {
   return (
     <BrowserRouter>
       <div className='container'>
-        <Menu/>
+
         <Switch>
           <Route exact path='/'>
+            <Menu/>
             <WelcomePage/>
           </Route>
           <Route path='/work'>
+            <Menu
+              page='work'
+            />
             <Main
               messages={messages}
+              page='work'
             />
           </Route>
           <Route path='/flood'>
+            <Menu
+              page='flood'
+            />
             <Main
               messages={floodMessages}
+              page='flood'
             />
           </Route>
         </Switch>
