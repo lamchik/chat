@@ -7,7 +7,9 @@ const Menu = (props) => {
 const {page} = props
   return (
     <div className='menu'>
-      <User/>
+      <User
+        page={page}
+      />
       <ChatList
         page={page}
       />

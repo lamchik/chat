@@ -20,7 +20,7 @@
     padding: 32px 0;
     background-color: rgba(62, 66, 88, 1);
     height: 27vh;
-    /*position:relative;*/
+    position:relative;
 }
 
 .user__email {
@@ -43,5 +43,23 @@
 }
 
 .user__button:hover {
+    opacity: 0.5;
+}
+
+.user__link{
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(226, 197, 140, 0.8);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background-color: rgba(76, 81, 108, 0);
+    transition: 0.2s linear;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.user__link:hover {
     opacity: 0.5;
 }
