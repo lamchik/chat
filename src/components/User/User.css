@@ -20,13 +20,28 @@
     padding: 32px 0;
     background-color: rgba(62, 66, 88, 1);
     height: 27vh;
+    /*position:relative;*/
 }
 
 .user__email {
     color: #B8AEAE;
-    margin: 0;
+    margin: 0 0 10px 0;
     font-size: 14px;
     font-family: 'Inter', 'Arial', sans-serif;
+}
 
+.user__button {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(226, 197, 140, 0.8);
+    cursor: pointer;
+    border: none;
+    text-decoration: underline;
+    background-color: rgba(76, 81, 108, 0);
+    transition: 0.2s linear;
+}
 
+.user__button:hover {
+    opacity: 0.5;
 }

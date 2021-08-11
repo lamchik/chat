@@ -1,41 +1,38 @@
-.chat-list{
+.chat-list {
     background-color: rgba(62, 66, 88, 1);
     height: 53vh;
     box-sizing: border-box;
     padding-top: 40px;
 }
 
-.chat-list__work{
+.chat-list__work {
     padding-left: 30px;
     height: 80px;
     background-color: rgba(76, 81, 108, 0);
-    color: rgba(226, 197, 140, 0.8);
     display: flex;
     align-items: center;
+    text-decoration: none;
     border-radius: 25px 0 0 25px;
     cursor: pointer;
     transition: 0.3s linear;
-
 }
 
 .chat-list__work:hover {
     border-radius: 25px 0 0 25px;
     background-color: rgba(197, 201, 222, 0.67);
     color: #FFFFFF;
-
 }
 
 .chat-list__flood {
     padding-left: 30px;
     height: 80px;
-    color: rgba(226, 197, 140, 0.8);
     display: flex;
     align-items: center;
     background-color: rgba(76, 81, 108, 0);
     border-radius: 25px 0 0 25px;
     cursor: pointer;
     transition: 0.3s linear;
-
+    text-decoration: none;
 }
 
 .chat-list__flood:hover {
@@ -47,6 +44,8 @@
 .chat-list__work-text {
     margin: 0;
     font-size: 24px;
+    text-decoration: none;
+    color: rgba(226, 197, 140, 0.8);
     font-family: 'Inter', 'Arial', sans-serif;
 
 }
@@ -54,6 +53,7 @@
 .chat-list__flood-text {
     margin: 0;
     font-size: 24px;
+    text-decoration: none;
+    color: rgba(226, 197, 140, 0.8);
     font-family: 'Inter', 'Arial', sans-serif;
-
 }

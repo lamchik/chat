@@ -8,6 +8,7 @@ const User = () => {
       <img className='user__avatar' alt='avatar' src={jin}/>
       <p className='user__name'>Джин Казама</p>
       <p className='user__email'>jin@tekken.com</p>
+      <button className='user__button'>Выйти</button>
     </div>
   )
 }

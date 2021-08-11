@@ -3,11 +3,14 @@ import SendMessageForm from "../SendMessageForm/SendMessageForm";
 import './Main.css'
 import MessageContainer from "../MessageContainer/MessageContainer";
 
-const Main = () => {
+const Main = (props) => {
+  const {messages} = props
   return (
     <div className='main'>
       <Header/>
-      <MessageContainer/>
+      <MessageContainer
+        messages={messages}
+      />
       <SendMessageForm/>
     </div>
   )

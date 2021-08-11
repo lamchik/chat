@@ -1,0 +1,72 @@
+[
+  {
+    "message": "Всем привет!",
+    "avatar": {
+      "url": "images/heihachi.png"
+    },
+    "name": "Хейхачи Мисима"
+  },
+  {
+    "message": "Привет, па",
+    "avatar": {
+      "url": "images/kazuya.png"
+    },
+    "name": "Казуя Мисима"
+  },
+  {
+    "message": "Привeт дед",
+    "avatar": {
+      "url": "images/jin2.png"
+    },
+    "name": "Джин Казама"
+  },
+  {
+    "message": "Завтра у нас сложный бой, надо обсудить тактику",
+    "avatar": {
+      "url": "images/heihachi.png"
+    },
+    "name": "Хейхачи Мисима"
+  },
+  {
+    "message": "Я готов!!",
+    "avatar": {
+      "url": "images/king.png"
+    },
+    "name": "Кинг"
+  },
+  {
+    "message": "И я",
+    "avatar": {
+      "url": "images/sab.png"
+    },
+    "name": "Саб-Зиро"
+  },
+  {
+    "message": "Саб-Зиро, а ты что тут делаешь?!?!",
+    "avatar": {
+      "url": "images/heihachi.png"
+    },
+    "name": "Хейхачи Мисима"
+  },
+  {
+    "message": "Я ушел из Мортал Комбата, там слишком жестоко было и зп маленькая",
+    "avatar": {
+      "url": "images/sab.png"
+    },
+    "name": "Саб-Зиро"
+  },
+  {
+    "message": "Добро пожаловать, Саб",
+    "avatar": {
+      "url": "images/paul.png"
+    },
+    "name": "Пол"
+  },
+  {
+    "message": "Спасибо",
+    "avatar": {
+      "url": "images/sab.png"
+    },
+    "name": "Саб-Зиро"
+  }
+]
