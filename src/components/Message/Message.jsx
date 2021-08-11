@@ -11,7 +11,7 @@ const Message = (props) => {
       <img className='message__avatar' src={message.avatar.url} alt='avatar'/>
       <div className='message__name-message'>
         <p className='message__name'>{message.name}</p>
-        <p className='message__message-text'>{message.message}</p>
+        <p className='message__message-text'>{message.message || message.messageText}</p>
       </div>
     </div>
   )

@@ -4,7 +4,7 @@ import Message from "../Message/Message";
 const MessageList = (props) => {
   const {messages} = props;
 
-  const messagesArray = messages.map((message) => (
+  const messagesArray = Array.from(messages).map((message) => (
     <Message
       message = {message}
     />

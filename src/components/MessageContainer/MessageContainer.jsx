@@ -1,10 +1,10 @@
 import './MessageContainer.css'
 import MessageList from '../MessageList/MessageList'
-import {createRef, useEffect} from "react";
+import {createRef, useEffect, useRef} from "react";
 
 
 const MessageContainer = (props) => {
-  const {messages} = props
+  const {messages, messageContainer} = props
   // const messagesContainer =createRef();
   //
   // useEffect(() => {
@@ -12,7 +12,7 @@ const MessageContainer = (props) => {
   // }, [props, messagesContainer]);
 
   return (
-    <div className='message-container'>
+    <div className='message-container' ref={messageContainer}>
       <MessageList
         messages={messages}
       />
