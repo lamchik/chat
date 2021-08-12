@@ -1,20 +1,19 @@
-import './ChatList.css'
-import '../../fonts/inter-3.13/inter-web/inter.css';
+import {useLocation} from 'react-router-dom'
 import { Link } from 'react-router-dom';
+import './ChatList.css'
 
 
-const ChatList = (props) => {
-  const {page} = props
-  const isChatFloodActive = `${page === 'flood' ? 'chat-list__flood_active' : ''}`;
-  const isChatWorkActive = `${page === 'work' ? 'chat-list__work_active' : ''}`;
+const ChatList = () => {
+  const location = useLocation()
+  const page = location.pathname;
 
   return (
-    <div className='chat-list'>
-      <Link to='/work' className={`chat-list__work ${isChatWorkActive}`}>
-        <Link to='/work' className='chat-list__work-text'>Рабочий чат</Link>
+    <div className='chat-list-wrapper'>
+      <Link to='/work' className={`chat-list ${page === '/work' && 'chat-list_active'}`}>
+        <span className='chat-list__text'>Рабочий чат</span>
       </Link>
-      <Link to='/flood' className={`chat-list__flood ${isChatFloodActive}`}>
-        <Link to='/flood' className='chat-list__flood-text'>Флудилка</Link>
+      <Link to='/flood' className={`chat-list ${page === '/flood' && 'chat-list_active'}`}>
+        <span className='chat-list__text'>Флудилка</span>
       </Link>
     </div>
   )

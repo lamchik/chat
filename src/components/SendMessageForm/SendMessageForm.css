@@ -1,5 +1,5 @@
 .send-message {
-    height: 15vh;
+    border-top: #B8AEAE 1px solid;
 }
 
 .send-message__form {
@@ -17,7 +17,7 @@
     border-radius: 20px 0 0 20px;
     border: #B8AEAE 1px solid;
     border-right: none;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Inter', 'Arial', sans-serif;
     outline: none;
 }

@@ -1,6 +1,4 @@
 .footer {
-    background-color: rgba(62, 66, 88, 1);
-    height: 12vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;

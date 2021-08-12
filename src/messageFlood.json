@@ -1,6 +1,8 @@
 [
   {
     "message": "ребзя",
+    "id": 11,
+    "user": 11,
     "avatar": {
       "url": "images/jin2.png"
     },
@@ -8,6 +10,8 @@
   },
   {
     "message": "м",
+    "id": 12,
+    "user": 12,
     "avatar": {
       "url": "images/yoshik.png"
     },
@@ -15,6 +19,8 @@
   },
   {
     "message": "я зарегался в ТикТоке",
+    "id": 13,
+    "user": 13,
     "avatar": {
       "url": "images/jin2.png"
     },
@@ -22,6 +28,8 @@
   },
   {
     "message": "АХАХХАХВХХАХАХА",
+    "id": 14,
+    "user": 14,
     "avatar": {
       "url": "images/paul.png"
     },
@@ -29,6 +37,8 @@
   },
   {
     "message": "...",
+    "id": 15,
+    "user": 15,
     "avatar": {
       "url": "images/king.png"
     },
@@ -36,6 +46,8 @@
   },
   {
     "message": "Подписывайся на меня",
+    "id": 16,
+    "user": 16,
     "avatar": {
       "url": "images/anna.png"
     },
@@ -43,6 +55,8 @@
   },
   {
     "message": "Завтра у меня в кабинете жду, Джин",
+    "id": 17,
+    "user": 17,
     "avatar": {
       "url": "images/heihachi.png"
     },
@@ -50,6 +64,8 @@
   },
   {
     "message": "ууууу кажется, завтра будет K.O.",
+    "id": 18,
+    "user": 18,
     "avatar": {
       "url": "images/paul.png"
     },
@@ -57,6 +73,8 @@
   },
   {
     "message": "завтра у меня выходной, сорян",
+    "id": 19,
+    "user": 19,
     "avatar": {
       "url": "images/jin2.png"
     },
@@ -64,6 +82,8 @@
   },
   {
     "message": "извини Хейхачи, он завтра снимает ТикТоки хахах",
+    "id":  20,
+    "user": 20,
     "avatar": {
       "url": "images/paul.png"
     },

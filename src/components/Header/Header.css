@@ -1,12 +1,11 @@
 .header{
-    height: 73px;
     background-color: rgba(211, 217, 253, 0.67);
     border-bottom: rgba(62, 66, 88, 0.5) 1px solid;
     width: 80vw;
     /*border-bottom: solid 1px ;*/
     /*box-shadow: 1px 9px 8px 0px rgba(34, 60, 80, 0.2);*/
     color: rgba(62, 66, 88,  0.8);
-    padding: 20px 0 0 50px;
+    padding: 20px 0 20px 50px;
     box-sizing: border-box;
     font-size: 24px;
     font-family: 'Inter', 'Arial', sans-serif;

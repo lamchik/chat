@@ -2,17 +2,23 @@ import Main from '../Main/Main'
 import Menu from "../Menu/Menu";
 import './App.css'
 import {Route, Switch, BrowserRouter} from 'react-router-dom';
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState, } from "react";
 import message from '../../message.json'
 import floodMessage from '../../messageFlood.json'
 import WelcomePage from "../WelcomePage/WelcomePage";
+import Login from "../Login/Login";
+import Register from '../Register/Register'
+import jinAvatar from '../../images/jin2.png'
+
+function randomNumber() {
+  return Math.floor(Math.random() * 1000000) + 22
+}
 
 function App () {
   const [messages, setMessages] = useState([])
   const [floodMessages, setFloodMessages] = useState([])
   const [messageText, setMessageText] = useState('')
-  const messageContainer = useRef()
-  console.log(messageContainer)
+
 
   const updateMessageText = (e) => {
     setMessageText(e.target.value);
@@ -22,69 +28,71 @@ function App () {
   useEffect(() => {
     setMessages(message)
     setFloodMessages(floodMessage)
-    messageContainer.current.scrollTop = messageContainer.current.scrollHeight
     console.log('here', messages)
-  }, [messages, floodMessages, messageContainer])
+  }, [messages, floodMessages])
 
   const onSubmit = (e) => {
     e.preventDefault();
     const newMessage = {
       messageText,
+      id: randomNumber(),
       avatar: {
-        url: 'klk'
+        url: jinAvatar
       },
       name: 'Jin'
     }
     setMessages(messages.push(newMessage))
     setMessageText('');
   };
+
   const onSubmitFlood = (e) => {
     e.preventDefault();
     const newMessage = {
       messageText,
+      id: randomNumber(),
       avatar: {
-        url: 'klk'
+        url: jinAvatar
       },
       name: 'Jin'
     }
 
     setFloodMessages(floodMessages.push(newMessage))
     setMessageText('');
+    console.log('jjjff', randomNumber())
   };
 
   return (
     <BrowserRouter>
       <div className='container'>
-
         <Switch>
+          <Route path="/signin">
+            <Login />
+          </Route>
+
+          <Route path="/signup">
+            <Register />
+          </Route>
+        </Switch>
+
+        <Menu/>
+        <Switch >
           <Route exact path='/'>
-            <Menu/>
             <WelcomePage/>
           </Route>
           <Route path='/work'>
-            <Menu
-              page='work'
-            />
             <Main
               messages={messages}
-              page='work'
               onSubmit={onSubmit}
               updateMessageText={updateMessageText}
               messageText={messageText}
-              messageContainer={messageContainer}
             />
           </Route>
           <Route path='/flood'>
-            <Menu
-              page='flood'
-            />
             <Main
               messages={floodMessages}
-              page='flood'
               onSubmit={onSubmitFlood}
               updateMessageText={updateMessageText}
               messageText={messageText}
-              messageContainer={messageContainer}
             />
           </Route>
         </Switch>

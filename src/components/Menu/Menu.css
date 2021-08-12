@@ -1,6 +1,15 @@
 .menu {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 20vw;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.45);
+    background-color: rgba(62, 66, 88, 1);
     /*box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.30);*/
     z-index: 1;
+}
+
+.user-wrapper {
+    margin-bottom: 30px;
 }

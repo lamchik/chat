@@ -2,28 +2,61 @@
     display: flex;
 }
 
+.message-wrap{
+    display: flex;
+}
+
 .message__name-message{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgba(211, 217, 253, 0.67);
+    border-radius: 20px;
+    padding: 0 10px;
+    max-height: 65px;
 }
 
 .message__avatar {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     padding: 10px;
 }
 
 .message__name{
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
     font-family: 'Inter', 'Arial', sans-serif;
     font-size: 14px;
     color: #7E7C7C;
-
 }
 
 .message__message-text {
     margin: 0;
     font-family: 'Inter', 'Arial', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
+    color: rgba(62, 66, 88,  1);
+}
+
+.message-change {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-change__icon{
+    width: 15px;
+    height: 15px;
+}
+
+.message-change__button{
+    width: 17px;
+    height: 17px;
+    margin-bottom: 5px;
+    border: none;
+    background-color: #FFFFFF;
+    transition: 0.3s linear;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.message-change__button:hover {
+    opacity: 0.3;
 }
