@@ -65,3 +65,16 @@
 .message-change__button:hover {
     opacity: 0.3;
 }
+
+.message__message-input{
+    display: none;
+}
+
+.message__message-input_active {
+    display: inline;
+    outline: none;
+    border-radius: 13px;
+    border: none;
+    font-size: 16px;
+    color: rgba(62, 66, 88,  1);
+}

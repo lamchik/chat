@@ -18,12 +18,25 @@ function App () {
   const [messages, setMessages] = useState([])
   const [floodMessages, setFloodMessages] = useState([])
   const [messageText, setMessageText] = useState('')
+  const [sendMessageText, setSendMessageText] = useState(messageText)
   const [user, setUser] = useState({
     id: 3,
     name: 'Джин Казуми',
     avatar: jinAvatar
   })
 
+  // const arrayOftextsOfMessages = () => {
+  //   let array = []
+  //   message.forEach((item) => {
+  //     array.push(item.message)
+  //   })
+  //   return array
+  // }
+
+  // const [textsOfMessages, setTextsOfMessages] = useState(arrayOftextsOfMessages)
+
+
+  // console.log('textsOfMessages', textsOfMessages)
 
   function deleteMessage(id) {
     const newArrayOfMessages = messages.filter((item) => {
@@ -39,15 +52,22 @@ function App () {
     setFloodMessages(newArrayOfMessages)
   }
 
+
+
   const updateMessageText = (e) => {
     setMessageText(e.target.value);
     console.log(messageText)
   };
 
+  const changeMessageText = (e) => {
+    setSendMessageText(e.target.value);
+    console.log('target', e.target.value)
+  }
+
   useEffect(() => {
     setMessages(message)
     setFloodMessages(floodMessage)
-    console.log('here', messages)
+    console.log('here', message)
   }, [])
 
   const onSubmit = (e) => {
@@ -63,6 +83,7 @@ function App () {
     setMessages(messages.push(newMessage))
     setMessageText('');
   };
+
 
   const onSubmitFlood = (e) => {
     e.preventDefault();
@@ -106,7 +127,9 @@ function App () {
               onSubmit={onSubmit}
               updateMessageText={updateMessageText}
               messageText={messageText}
+              sendMessageText={sendMessageText}
               deleteMessage={deleteMessage}
+              changeMessageText={changeMessageText}
               // onEdit={editMessage}
             />
           </Route>

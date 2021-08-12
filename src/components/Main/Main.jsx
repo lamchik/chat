@@ -4,13 +4,19 @@ import './Main.css'
 import MessageContainer from "../MessageContainer/MessageContainer";
 
 const Main = (
-  {messages, onSubmit, updateMessageText, messageText, deleteMessage, onEdit}
+  {messages, onSubmit, updateMessageText, messageText, deleteMessage, changeMessageText, sendMessageText, onEdit}
 ) => {
 
   return (
     <div className='main'>
       <Header/>
-      <MessageContainer messages={messages} deleteMessage={deleteMessage}/>
+      <MessageContainer
+        messages={messages}
+        deleteMessage={deleteMessage}
+        changeValue={sendMessageText}
+        changeMessageText={changeMessageText}
+        onSubmit={onSubmit}
+      />
       <SendMessageForm
         onChange={updateMessageText}
         changeValue={messageText}
