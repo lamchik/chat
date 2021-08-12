@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    min-height: 100vh;
 }
 
 .login__form{
@@ -77,4 +78,9 @@
 
 .login__link-text:first-child {
     color: rgba(195, 191, 191, 1);
+}
+
+.login__button-link{
+   color: #FFFFFF;
+    text-decoration: none;
 }

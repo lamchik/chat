@@ -14,7 +14,6 @@ const Message = ({message, deleteMessage}) => {
   const onDelete=(e) => { e.preventDefault(); deleteMessage(message.id)}
   const onChange=(e) => {
     setMessageTextForEdit(e.target.value)
-    console.log('tut', messageTextForEdit)
   }
 
   const onS=(e) => {

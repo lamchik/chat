@@ -2,7 +2,7 @@ import Main from '../Main/Main'
 import Menu from "../Menu/Menu";
 import './App.css'
 import {Route, Switch, BrowserRouter} from 'react-router-dom';
-import {useEffect, useState, } from "react";
+import {useState} from "react";
 import message from '../../message.json'
 import floodMessage from '../../messageFlood.json'
 import WelcomePage from "../WelcomePage/WelcomePage";
@@ -21,11 +21,6 @@ function App () {
   const [sendMessageText, setSendMessageText] = useState(messageText)
   const arrayOfMessages = messages
   const arrayOfFloodMessages = floodMessages
-  // const [user, setUser] = useState({
-  //   id: 3,
-  //   name: 'Джин Казуми',
-  //   avatar: jinAvatar
-  // })
 
   function deleteMessage(id) {
     const newArrayOfMessages = messages.filter((item) => {
@@ -43,18 +38,11 @@ function App () {
 
   const updateMessageText = (e) => {
     setMessageText(e.target.value);
-    console.log(messageText)
   };
 
   const changeMessageText = (e) => {
     setSendMessageText(e.target.value);
-    console.log('target', e.target.value)
   }
-
-  // useEffect(() => {
-  //
-  //   console.log('here', message)
-  // }, [messages, floodMessages])
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -87,7 +75,6 @@ function App () {
     arrayOfFloodMessages.push(newMessage)
     setFloodMessages(arrayOfFloodMessages)
     setMessageText('');
-    console.log('HERE', randomNumber(), floodMessages)
   };
 
   return (

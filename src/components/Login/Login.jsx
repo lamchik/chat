@@ -21,7 +21,9 @@ const Login = () => {
                  required minLength={7}
                  maxLength={200}
           />
-          <button className="login__button">Войти</button>
+          <button className="login__button">
+            <Link className="login__button-link" to='/'>Войти</Link>
+          </button>
         </form>
         <div className='login__link'>
           <p className='login__link-text'>Ещё не зарегистрированы?</p>

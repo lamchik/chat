@@ -26,12 +26,9 @@ const Register = () => {
                  placeholder="Введите имя"
                  required name="name"
           />
-          {/*<input className="login__input"*/}
-          {/*       type="text"*/}
-          {/*       placeholder="ссылка на картинку"*/}
-          {/*       required name="avatar"*/}
-          {/*/>*/}
-          <button className="login__button">Регистрация</button>
+          <button className="login__button">
+            <Link className="login__button-link" to='/'>Зарегистрироваться</Link>
+          </button>
         </form>
         <div className='login__link'>
           <p className='login__link-text'>Уже зарегистрированы?</p>

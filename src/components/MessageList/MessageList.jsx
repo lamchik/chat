@@ -13,7 +13,6 @@ const MessageList = (props) => {
       changeMessageText={changeMessageText}
     />
   ));
-  console.log("lslslsl", messages)
 
   return (
     <div className='message-list'>{messagesArray}</div>
