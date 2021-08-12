@@ -4,11 +4,13 @@ import close from '../../images/close.png'
 import edit from '../../images/edit.png'
 
 
-const Message = (props) => {
-  const {message} = props;
+const Message = ({message, deleteMessage, onEdit}) => {
+
+  const visibleIcons = message.user === 3 ? "message-change_active" : ''
+  const onDelete=(e) => { e.preventDefault(); deleteMessage(message.id)}
 
   return (
-    <div className='message-wrap'>
+    <form className='message-wrap' >
       <div className='message'>
         <img className='message__avatar' src={message.avatar.url} alt='avatar'/>
         <div className='message__name-message'>
@@ -16,15 +18,15 @@ const Message = (props) => {
           <p className='message__message-text' >{message.message || message.messageText}</p>
         </div>
       </div>
-      <div className='message-change'>
-        <button className='message-change__button'>
+      <div className={`message-change ${visibleIcons}`}>
+        <button className='message-change__button' onClick={onDelete}>
           <img className='message-change__icon' alt='close_icon' src={close}/>
         </button>
-        <button className='message-change__button'>
+        <button className='message-change__button' onClick={onEdit}>
           <img className='message-change__icon' alt='edit_icon' src={edit}/>
         </button>
       </div>
-    </div>
+    </form>
 
   )
 }

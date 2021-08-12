@@ -37,8 +37,13 @@
 }
 
 .message-change {
+    display: none;
+}
+
+.message-change_active{
     display: flex;
     flex-direction: column;
+
 }
 
 .message-change__icon{

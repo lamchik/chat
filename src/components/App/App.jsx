@@ -18,7 +18,26 @@ function App () {
   const [messages, setMessages] = useState([])
   const [floodMessages, setFloodMessages] = useState([])
   const [messageText, setMessageText] = useState('')
+  const [user, setUser] = useState({
+    id: 3,
+    name: 'Джин Казуми',
+    avatar: jinAvatar
+  })
 
+
+  function deleteMessage(id) {
+    const newArrayOfMessages = messages.filter((item) => {
+      return item.id !== id
+    })
+    setMessages(newArrayOfMessages)
+  }
+
+  function deleteFloodMessage(id) {
+    const newArrayOfMessages = floodMessages.filter((item) => {
+      return item.id !== id
+    })
+    setFloodMessages(newArrayOfMessages)
+  }
 
   const updateMessageText = (e) => {
     setMessageText(e.target.value);
@@ -29,7 +48,7 @@ function App () {
     setMessages(message)
     setFloodMessages(floodMessage)
     console.log('here', messages)
-  }, [messages, floodMessages])
+  }, [])
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -65,6 +84,7 @@ function App () {
     <BrowserRouter>
       <div className='container'>
         <Switch>
+
           <Route path="/signin">
             <Login />
           </Route>
@@ -74,25 +94,30 @@ function App () {
           </Route>
         </Switch>
 
-        <Menu/>
         <Switch >
           <Route exact path='/'>
+            <Menu/>
             <WelcomePage/>
           </Route>
           <Route path='/work'>
+            <Menu/>
             <Main
               messages={messages}
               onSubmit={onSubmit}
               updateMessageText={updateMessageText}
               messageText={messageText}
+              deleteMessage={deleteMessage}
+              // onEdit={editMessage}
             />
           </Route>
           <Route path='/flood'>
+            <Menu/>
             <Main
               messages={floodMessages}
               onSubmit={onSubmitFlood}
               updateMessageText={updateMessageText}
               messageText={messageText}
+              deleteMessage={deleteFloodMessage}
             />
           </Route>
         </Switch>

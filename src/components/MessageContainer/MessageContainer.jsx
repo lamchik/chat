@@ -3,7 +3,7 @@ import MessageList from '../MessageList/MessageList'
 import {createRef, useEffect} from "react";
 
 
-const MessageContainer = ({messages}) => {
+const MessageContainer = ({messages, deleteMessage, onEdit}) => {
   const messageContainerRef = createRef();
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const MessageContainer = ({messages}) => {
 
   return (
     <div className='message-container' ref={messageContainerRef}>
-      <MessageList messages={messages}/>
+      <MessageList messages={messages} deleteMessage={deleteMessage}/>
     </div>
   )
 }

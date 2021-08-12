@@ -2,7 +2,7 @@
   {
     "message": "ребзя",
     "id": 11,
-    "user": 11,
+    "user": 3,
     "avatar": {
       "url": "images/jin2.png"
     },
@@ -20,7 +20,7 @@
   {
     "message": "я зарегался в ТикТоке",
     "id": 13,
-    "user": 13,
+    "user": 3,
     "avatar": {
       "url": "images/jin2.png"
     },
@@ -74,7 +74,7 @@
   {
     "message": "завтра у меня выходной, сорян",
     "id": 19,
-    "user": 19,
+    "user": 3,
     "avatar": {
       "url": "images/jin2.png"
     },
