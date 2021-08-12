@@ -64,7 +64,8 @@ function App () {
       avatar: {
         url: jinAvatar
       },
-      name: 'Jin'
+      name: 'Джин',
+      user: 3
     }
     arrayOfMessages.push(newMessage)
     setMessages(arrayOfMessages)
@@ -80,7 +81,8 @@ function App () {
       avatar: {
         url: jinAvatar
       },
-      name: 'Jin'
+      name: 'Джин',
+      user: 3
     }
     arrayOfFloodMessages.push(newMessage)
     setFloodMessages(arrayOfFloodMessages)
