@@ -5,7 +5,7 @@ import edit from '../../images/edit.png'
 import {useState} from "react";
 
 
-const Message = ({message, deleteMessage, changeValue, changeMessageText, editMessage}) => {
+const Message = ({message, deleteMessage}) => {
 
   const [messageTextForEdit, setMessageTextForEdit] = useState(message.message || message.messageText)
   const [textMessage, setTextMessage] = useState(message.message || message.messageText)

@@ -15,28 +15,17 @@ function randomNumber() {
 }
 
 function App () {
-  const [messages, setMessages] = useState([])
-  const [floodMessages, setFloodMessages] = useState([])
+  const [messages, setMessages] = useState(message)
+  const [floodMessages, setFloodMessages] = useState(floodMessage)
   const [messageText, setMessageText] = useState('')
   const [sendMessageText, setSendMessageText] = useState(messageText)
-  const [user, setUser] = useState({
-    id: 3,
-    name: 'Джин Казуми',
-    avatar: jinAvatar
-  })
-
-  // const arrayOftextsOfMessages = () => {
-  //   let array = []
-  //   message.forEach((item) => {
-  //     array.push(item.message)
-  //   })
-  //   return array
-  // }
-
-  // const [textsOfMessages, setTextsOfMessages] = useState(arrayOftextsOfMessages)
-
-
-  // console.log('textsOfMessages', textsOfMessages)
+  const arrayOfMessages = messages
+  const arrayOfFloodMessages = floodMessages
+  // const [user, setUser] = useState({
+  //   id: 3,
+  //   name: 'Джин Казуми',
+  //   avatar: jinAvatar
+  // })
 
   function deleteMessage(id) {
     const newArrayOfMessages = messages.filter((item) => {
@@ -52,8 +41,6 @@ function App () {
     setFloodMessages(newArrayOfMessages)
   }
 
-
-
   const updateMessageText = (e) => {
     setMessageText(e.target.value);
     console.log(messageText)
@@ -64,11 +51,10 @@ function App () {
     console.log('target', e.target.value)
   }
 
-  useEffect(() => {
-    setMessages(message)
-    setFloodMessages(floodMessage)
-    console.log('here', message)
-  }, [])
+  // useEffect(() => {
+  //
+  //   console.log('here', message)
+  // }, [messages, floodMessages])
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -80,7 +66,8 @@ function App () {
       },
       name: 'Jin'
     }
-    setMessages(messages.push(newMessage))
+    arrayOfMessages.push(newMessage)
+    setMessages(arrayOfMessages)
     setMessageText('');
   };
 
@@ -95,10 +82,10 @@ function App () {
       },
       name: 'Jin'
     }
-
-    setFloodMessages(floodMessages.push(newMessage))
+    arrayOfFloodMessages.push(newMessage)
+    setFloodMessages(arrayOfFloodMessages)
     setMessageText('');
-    console.log('jjjff', randomNumber())
+    console.log('HERE', randomNumber(), floodMessages)
   };
 
   return (
@@ -130,7 +117,6 @@ function App () {
               sendMessageText={sendMessageText}
               deleteMessage={deleteMessage}
               changeMessageText={changeMessageText}
-              // onEdit={editMessage}
             />
           </Route>
           <Route path='/flood'>

@@ -2,7 +2,7 @@ import './MessageList.css'
 import Message from "../Message/Message";
 
 const MessageList = (props) => {
-  const {messages, deleteMessage, onSubmit, changeValue, changeMessageText} = props;
+  const {messages, deleteMessage, changeValue, changeMessageText} = props;
 
   const messagesArray = Array.from(messages).map((message) => (
     <Message
@@ -11,7 +11,6 @@ const MessageList = (props) => {
       deleteMessage={deleteMessage}
       changeValue={changeValue}
       changeMessageText={changeMessageText}
-      onSubmit={onSubmit}
     />
   ));
   console.log("lslslsl", messages)

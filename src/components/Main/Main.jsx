@@ -15,7 +15,6 @@ const Main = (
         deleteMessage={deleteMessage}
         changeValue={sendMessageText}
         changeMessageText={changeMessageText}
-        onSubmit={onSubmit}
       />
       <SendMessageForm
         onChange={updateMessageText}
